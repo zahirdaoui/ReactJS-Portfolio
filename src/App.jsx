@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h1>hello to my PortFolion</h1>
+      <h1>hi from git and github </h1>
     </>
   )
 }
