@@ -1,11 +1,12 @@
 
 import './App.css'
+import Home from './pages/home'
 
 function App() {
 
   return (
     <>
-      <h1>hi from git and github </h1>
+      <div><Home/></div>
     </>
   )
 }
