@@ -162,7 +162,8 @@ header{
         text-align: start;
     }
 }
-/* section-aboutus-skills */
+
+/* section-aboutme-skills */
 .section-aboutus-skills .skills{
     margin-left: 10%;
 }
@@ -172,49 +173,91 @@ header{
 .section-aboutus-skills .skills h3{
     color: var(--main-bg-color);
 }
-.section-aboutus-skills .skills h1{
-    color: var(--main-bg-color);
-    font-size: 30px;
-    font-weight: bolder;
-    text-transform: capitalize;
+
+.skill-card {
+        background:var(--cond-bg-color);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(120, 120, 255, 0.2);
+        border-radius: 16px;
+        padding: 1.5rem 1rem;
+        text-align: center;
+        height: 100%;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+        cursor: pointer;
 }
-/* code bar skills */
-.skills-lng-content p{
-    font-weight: bold;
-    color: black;
-    margin-bottom: 0px;
-    margin-top: 5px;
-    text-align: start;
-}
-.container-lng {
-    width: 100%; 
-    background-color: #ddd; 
-    border-radius: 10px;
-  }
-.skills-lng {
-  text-align: right; 
-  color: black;
-  border-radius: 10px;
-}
-.skills .text h1{
-    color: var(--text-bg-color);
-    text-transform: capitalize;
-    margin-bottom: 10px;
-}
-.skills .text h3{
-    color: var(--main-bg-color);
-    text-transform: capitalize;
-}
-.skills-text p{
-    color: var(--text-bg-color);
-    font-weight: 500;
-}
-.html {width: 60%; height: 10px; background-color:var(--main-bg-color) ;} 
-.js {width: 55%; height: 10px; background-color:var(--main-bg-color) ;} 
- .laravel {width: 60%; height: 10px; background-color: var(--main-bg-color);} 
- .php {width: 40%; height: 10px; background-color:var(--main-bg-color) ;} 
- .sql  {width: 58%; height: 10px; background-color:var(--main-bg-color) ;} 
-.wordpress {width: 55%; height: 10px; background-color:var(--main-bg-color) ;}
+
+    /* Infinite floating animation */
+    @keyframes floatUpDown {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .skill-card {
+      animation: floatUpDown 6s ease-in-out infinite;
+    }
+
+    /* Stagger the animations cards */
+    .skill-card:nth-child(1) { animation-delay: 0s; }
+    .skill-card:nth-child(2) { animation-delay: 2s; }
+    .skill-card:nth-child(3) { animation-delay: 4s; }
+
+    .skill-card:hover {
+      transform: translateY(-10px) scale(1.05) !important;
+      transition: all 0.5s;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-header {
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid rgba(180,180,255,0.2);
+    }
+    .skill-body{
+        text-align: center;
+    }
+
+    .skill-icon {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      border-radius: 50%;
+      color: var(--main-bg-color);
+    }
+
+    .tech-name {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color:var(--text-bg-color);
+     display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+.card-header { color:var(--text-bg-color); }
+    /* Category colors */
+    
+
+    @media (max-width: 767px) {
+      .section-title { font-size: 2.4rem; }
+      .skill-card { padding: 1.2rem 0.8rem; }
+    }
+
+
+
+
+
 
 /* services servives provider */
 .section-services-provider-items{

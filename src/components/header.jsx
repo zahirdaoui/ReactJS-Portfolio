@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./bavBar";
+import NavBar from "./navBar";
 import headerbg from '../assets/headerbg.png'
 import Button from './button';
 
