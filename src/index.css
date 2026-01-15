@@ -216,7 +216,7 @@ header{
 
     .skill-card:hover {
       transform: translateY(-10px) scale(1.05) !important;
-      transition: all 0.5s;
+      transition: all 0.7s;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     }
 
@@ -254,8 +254,6 @@ header{
 
 /* Start section Projects */
 
-
-/* End section Projects */
 .section-title {
       font-size: 2.6rem;
       font-weight: 700;
@@ -355,6 +353,107 @@ header{
       .project-preview { height: 240px; }
     }
 
+
+
+/* End section Projects */
+/* Start section Education  */
+
+    @keyframes neonFlow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    .education-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .edu-card {
+      background: var(--card-bg);
+      border: var(--media-text-color);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(6px);
+      height: 100%;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-12px) scale(1.04);
+      border-color: var(--main-bg-color);
+      box-shadow: 
+        0 25px 50px -12px rgba(2, 176, 189, 0.25),
+        0 0 0 1px rgba(6, 169, 145, 0.4) inset;
+    }
+
+    .card-icon-wrapper {
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:var(--cond-bg-color);
+      position: relative;
+    }
+
+    .card-icon {
+      font-size: 4.8rem;
+      background: var(--main-bg-color);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      transition: all 0.6s ease;
+    }
+
+    .edu-card:hover .card-icon {
+      transform: scale(1.15) rotate(8deg);
+    }
+
+    .card-body {
+      padding: 1.8rem;
+      text-align: center;
+      color: var(--text-bg-color);
+    }
+
+    .degree-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text-bg-color);
+    }
+
+    .school {
+      color: var(--neon-blue);
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+
+    .years {
+      color: var(--text-bg-color);
+      font-size: 0.95rem;
+      font-weight: 400;
+    }
+
+    /* Small sparkle effect on hover */
+    .edu-card::before {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(0,240,255,0.15) 0%, transparent 70%);
+      top: -60px;
+      left: -60px;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      pointer-events: none;
+    }
+
+    .edu-card:hover::before {
+      opacity: 1;
+      transform: translate(80px, 60px);
+    }
+/* End section education */
 
 /* have any project in your mind */
 .project-idea-content{

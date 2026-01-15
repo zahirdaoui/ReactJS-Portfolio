@@ -1,3 +1,4 @@
+import Education from "../components/education";
 import FloatingNavbar from "../components/floatingNavbar";
 import Header from "../components/header";
 import Projects from "../components/projects";
@@ -11,6 +12,7 @@ const Home = ()=>{
         <div><Header /></div>
         <Skills />
         <Projects/>
+        <Education/>
     </>
 }
 
