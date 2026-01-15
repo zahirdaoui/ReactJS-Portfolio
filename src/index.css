@@ -169,11 +169,19 @@ header{
 }
 .section-aboutus-skills img{
     padding-right: 10px;
+    margin:20%;
+    width: 100%;
+    animation: floatUpDown 6s ease-in-out infinite;
 }
-.section-aboutus-skills .skills h3{
+.skills .about-title{
+    font-size: 30px;
     color: var(--main-bg-color);
+    font-weight: 700!important;
 }
-
+.skills .text-about{
+    font-size: 18px;
+    font-weight: 400;
+}
 .skill-card {
         background:var(--cond-bg-color);
         backdrop-filter: blur(12px);
@@ -185,6 +193,7 @@ header{
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         transition: transform 0.3s ease;
         cursor: pointer;
+        animation: floatUpDown 6s ease-in-out infinite;
 }
 
     /* Infinite floating animation */
@@ -198,10 +207,6 @@ header{
       100% {
         transform: translateY(0);
       }
-    }
-
-    .skill-card {
-      animation: floatUpDown 6s ease-in-out infinite;
     }
 
     /* Stagger the animations cards */
@@ -218,32 +223,31 @@ header{
     .card-header {
       font-weight: 700;
       font-size: 1.3rem;
-      margin-bottom: 1.2rem;
-      padding-bottom: 0.8rem;
+      color: var(--main-bg-color)!important;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.9rem;
       border-bottom: 1px solid rgba(180,180,255,0.2);
     }
-    .skill-body{
-        text-align: center;
+/*     .skill-body{
+       width: 40px;
+       height: 50px;
+       text-align: center;
     }
-
+ */
     .skill-icon {
       width: 56px;
       height: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-size: 2rem;
+      color: var(--text-bg-color);
       border-radius: 50%;
-      color: var(--main-bg-color);
+      margin: auto;
     }
 
     .tech-name {
       font-size: 0.95rem;
       font-weight: 500;
       color:var(--text-bg-color);
-     display: flex;
-      align-items: center;
-      justify-content: center;
+      text-align: inherit;
     }
 .card-header { color:var(--text-bg-color); }
     /* Category colors */

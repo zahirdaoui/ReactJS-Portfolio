@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./navBar";
-import headerbg from '../assets/headerbg.png'
+import headerbg from '../assets/header.png'
 import Button from './button';
 
 const Header = ()=>{
