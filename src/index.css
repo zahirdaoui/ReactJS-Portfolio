@@ -617,26 +617,28 @@ header{
 .footer-potfolion div h2{
     color: var(--text-bg-color);
 }
-.footer-potfolion div h1{
-    color: var(--main-bg-color);
-    text-transform: uppercase;
-    font-weight: 900;
+.footer-potfolion div .email{
+    font-size: 18px;
+    color: var(--text-bg-color);
+    font-weight: 500;
+    margin-bottom: 5px;
+
 }
+
+
 .footer-potfolion div h1 span{
    color: var(--text-bg-color);
 }
 .footer-potfolion div ul{
     list-style-type: none;
-    margin-top: 4%;
+    margin-top: 15px;
 }
 .footer-potfolion div ul li{
     margin-right: 10px;
 }
 .footer-potfolion div ul li i{
     color: #5c677c;
-    font-size: 20px;
-    background-color: #ebebee;
-    padding: 10px;
+    font-size: 30px;
     border-radius: 50%;
     transition: all 0.5s;
     margin-bottom: 10px;
@@ -644,30 +646,7 @@ header{
 .footer-potfolion div ul li:hover i{
     color: var(--main-bg-color);
 }
-.footer-potfolion div h2{
-    font-weight: bold;
-    margin-bottom: 20px;
-}
 
-.footer-potfolion div .links-header{
-    list-style-type: none;
-    margin-top: 1%;
-}
-.footer-potfolion div .links-header li{
-    margin-right: 30px;
-    margin-bottom: 20px;
-}
-.footer-potfolion div .links-header a{
-    text-decoration: none;
-    color: rgb(114, 114, 114);
-    text-transform: capitalize;
-    font-weight: 700;
-    transition: all 0.5s;
-    color: var(--text-bg-color);
-}
-.footer-potfolion div .links-header a:hover{
-    color: var(--main-bg-color);
-}
 
 
 
