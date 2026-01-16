@@ -9,7 +9,7 @@ import { faPhp , faJava , faLaravel ,
 import { siMysql,siPostgresql ,siPostman } from 'simple-icons/icons'
 const Skills = ()=>{
     return <>
-   <section id="AboutUs" className="section-aboutus-skills container">
+   <section id="about" className="section-aboutus-skills container">
         <div className="container row py-5">
             <div className="img d-none d-md-block col-10 col-lg-4">
                 <img src={skillsImg} className="w-100" />
@@ -23,14 +23,6 @@ const Skills = ()=>{
                         automated solutions.
                      </p>
                 </div>
-
-
-
-                
-
-
-
-
                 <div className="skills-lng-content row mt-4">
 
 

@@ -1,10 +1,10 @@
-import headerbg from '../assets/header.png'
+import webCover from '../assets/a-website.jpg'
 const CartProject = ()=>{
     return <>
         <div className="col-lg-4 col-md-6">
             <div className="project-card h-100">
                 <div className="project-preview">
-                    <img src={headerbg} alt="Personal Blog" />
+                    <img src={webCover} alt="..............." />
                     <div className="tech-badges">
                             <span className="badge-tech">React</span>
                             <span className="badge-tech">Node.js</span>
@@ -14,7 +14,7 @@ const CartProject = ()=>{
                 </div>
                 <div className="project-body d-flex flex-column">
                         <h3 className="project-title">Personal Blog Platform</h3>
-                        <p className="project-subtitle">
+                        <p className="project-subtitle text-box">
                             A comprehensive business and industrial consulting platform built with Wagtail Django.
                             Provides tailored solutions for project planning, strategic partnerships, 
                             and operational optimization with features for trade facilitation and legal support.

@@ -1,7 +1,7 @@
 const Contact = ()=>{
     return <>
              
-        <section className="contuct-us py-5" id="ContactUs">
+        <section className="contact py-5" id="contact">
                 <div className="container">
                     <h3 className="section-titles-first text-center section-title">CONTACT ME</h3>
                     <div className="alert alert-primary d-none envoi-message alert-dismissible fade show" role="alert" id="messsagesend">
