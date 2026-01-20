@@ -27,7 +27,7 @@ a{
 }
 .sociale-medai-flotiing{
     position: relative;
-    z-index: 10001;
+    z-index: 2;
 }
 .sociale-medai-flotiing ul{
     border: 1px solid var(--main-bg-color);
@@ -44,14 +44,15 @@ a{
 }
 .sociale-medai-flotiing ul li{
     margin-bottom: 10px;
+
 }
-.sociale-medai-flotiing ul li i{
+.sociale-medai-flotiing ul li .follow-style{
     margin-bottom: 10px;
     color:var(--media-text-color);
     transition: all 0.2s;
-
+    border-radius: 50%;
 }
-.sociale-medai-flotiing ul li:hover i{
+.sociale-medai-flotiing ul li:hover .follow-style{
     margin-bottom: 10px;
     color:var(--main-bg-color);
 }
@@ -82,24 +83,19 @@ a{
 .logo-navbar-zahir span{
     color: var(--text-bg-color);
 }
-.header-content{
-    width: 80%!important;
-    margin: auto;
-}
+
 header{
     background-color: var(--cond-bg-color);
 }
 .header-content-jobs{
     color: var(--text-bg-color);
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 700;
     text-transform: capitalize;
 }
-.header-content-text{
-      margin-top: 7%;
-  }
+
 .header-content h1{
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     color: var(--text-bg-color);
     font-family: 'Zen Antique', serif;
@@ -108,12 +104,13 @@ header{
 .header-content h2{
     font-weight: bold;
     color:var(--main-bg-color);
+     font-size: 22px;
 }
 .header-content-text-jobs{
     color: var(--text-bg-color);
 }
 .header-content p{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     padding-right: 30px;
      text-align: justify;
@@ -121,8 +118,8 @@ header{
 .header-content button{
     margin-top: 30px;
     height: 50px;
-    width: 200px;
-    font-size: 20px;
+    width: 150px;
+    font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
     background-color: var(--main-bg-color);
@@ -138,9 +135,7 @@ header{
     box-shadow: 0px 0px 9px var(--main-bg-color);
     
 }
-.header-content img{
-    margin-bottom:-45px;
-}
+
 .mybtn{
   border-style: none!important;
 }
@@ -197,7 +192,6 @@ header{
         border-radius: 16px;
         padding: 1.5rem 1rem;
         text-align: center;
-        height: 100%;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         transition: transform 0.3s ease;
         cursor: pointer;

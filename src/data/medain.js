@@ -1,0 +1,27 @@
+export const FollowMe = [
+    {
+        "id":1,
+        "icon":"git",
+        "link":"https://github.com/zahirdaoui"
+    },
+     {
+        "id":2,
+        "icon":"linkdin",
+        "link":"https://www.linkedin.com/in/ezzahir-daoui-bb39161b7/"
+    },
+     {
+        "id":3,
+        "icon":"facebook",
+        "link":"https://www.linkedin.com/in/ezzahir-daoui-bb39161b7/"
+    },
+     {
+        "id":4,
+        "icon":"instargam",
+        "link":"https://www.instagram.com/web.crud/"
+    },
+     {
+        "id":5,
+        "icon":"whatsapp",
+        "link":"https://Wa.me/+212625595887"
+    },
+]
