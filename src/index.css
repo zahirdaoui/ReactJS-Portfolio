@@ -520,18 +520,12 @@ header{
     margin-top:25px;
 }
 
-.item-contact-us img{
-    width: 20%;
-   
-}
 .item-contact-us form{
     position: relative;
-    margin: 0;
 }
-.item-contact-us>i{
+.item-contact-us .item-contact-us-image{
     font-size: 250px;
     color: var(--main-bg-color);
-    padding-right: 30px;
      animation: floatUpDown 6s ease-in-out infinite;
 }
 .item-contact-us form input{ 
