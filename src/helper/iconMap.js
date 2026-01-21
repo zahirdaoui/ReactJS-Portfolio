@@ -1,36 +1,18 @@
-// iconMap.js
-/* import { 
-    faPhp ,
-     faJava ,
-      faLaravel , 
-    faReact,
-    faHtml5,faCss ,
-     faJs , faBootstrap,faGit,
-     faDocker,
-
-    } from '@fortawesome/free-brands-svg-icons'; */
-
-/* export const iconMap = {
-  html: faHtml5,
-  css:faCss,
-  javascript:faJs,
-  bootstrap:faBootstrap,
-  reactjs:faReact,
-}; */
-
-/* FRENT-END */
-import { siHtml5 , siCss, siBootstrap , siJavascript , siReact } from 'simple-icons/icons'
-/* DATABASES */
-import { siMysql,siPostgresql} from 'simple-icons/icons'
-/* BACK-END*/
-import { siSpring, siPhp , siLaravel} from 'simple-icons/icons'
-/* TOOLS */
-import { siGithub ,siPostman ,siSwagger,siDocker } from 'simple-icons/icons'
-
-/* FOLLOW */
-import { siInstagram , siWhatsapp , siFacebook , siInspire} from 'simple-icons/icons'
 
 
+import {
+          /* FRENT-END */
+      siHtml5 , siCss, siBootstrap , siJavascript , siReact,
+           /*DATABASES */
+      siMysql,siPostgresql ,siScala,
+           /* BACK-END*/
+      siSpring, siPhp , siLaravel,
+            /* TOOLS */
+      siGithub ,siPostman ,siSwagger,siDocker,
+             /* FOLLOW */
+      siInstagram , siWhatsapp , siFacebook , siInspire
+      
+ } from 'simple-icons'
 
 
 export const iconMap = {
@@ -42,7 +24,7 @@ export const iconMap = {
   reactjs:siReact,
   /* DATABASES*/
   mysql:siMysql,
-  sqlserver:siHtml5,
+  sqlserver:siScala,
   postgrelsql:siPostgresql,
   /* TOOLS */
   git:siGithub,

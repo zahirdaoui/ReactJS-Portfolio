@@ -68,7 +68,7 @@ const data = [
       {
         "id":3,
         "title_skill":"SqlServer",
-        "logo":'mysql'
+        "logo":'sqlserver'
       }
     ]
   },

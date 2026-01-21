@@ -1,7 +1,4 @@
-
 import logo from '../assets/logo.png';
-
-
 const NavBar = ()=>{
 
     return <>

@@ -6,8 +6,6 @@ const FloatingNavbar =()=>{
      const [data , setData] = useState([]);
     useEffect(()=>{
         setData(FollowMe);
-        /* console.log(data, typeof data);
-        console.log(data); */
     },[data]);
     return <>
         <section className="d-none d-sm-block sociale-medai-flotiing">

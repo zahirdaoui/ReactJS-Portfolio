@@ -6,7 +6,6 @@ const Footer = ()=>{
      const [data , setData] = useState([]);
         useEffect(()=>{
             setData(LetsTalk);
-            console.log(data);
         },[data]);
 
     return  <section className="talk-to-me">

@@ -4,7 +4,6 @@ const FollowUi=({linkUrl , iconMed})=>{
     const icon = jsonToIconObject(iconMed);
 
     return <>
-
             <li>
                 <a href={linkUrl} target="_blank">
                     <svg

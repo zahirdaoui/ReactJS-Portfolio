@@ -1,26 +1,18 @@
-import skillsImg from "../assets/skillsimg.jpg"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useState , useEffect } from "react";
+import skillsImg from "../assets/skillsimg.jpg";
 import dataSkill from "../data/data.js";
-import { faPhp , faJava , faLaravel , 
-    faReact,faHtml5,faCss ,
-     faJs , faBootstrap,faGit,
-     faDocker,
-    } from '@fortawesome/free-brands-svg-icons';
-
-import { siMysql,siPostgresql ,siPostman } from 'simple-icons/icons'
-
 import CartSkills from "../ui/cartSkills";
 
-import { useState , useEffect } from "react";
-import Skill from "../ui/skill.jsx";
+
 
 const Skills = ()=>{
+
     const [data , setData] = useState([]);
+
     useEffect(()=>{
         setData(dataSkill);
-        /* console.log(data, typeof data);
-        console.log(data); */
     },[data]);
+
     return <>
    <section id="about" className="section-aboutus-skills container">
         <div className="container row py-5">
@@ -42,23 +34,17 @@ const Skills = ()=>{
                            if(Object.keys(elem.skill).length >=4){
                               classElem = 12;
                            }
-                            return <div className={`col-${classElem} mt-4`} >
-
+                            return <div key={elem.id } className={`col-md-${classElem} col-12 mt-4`} >
                                 <CartSkills
-                                    key={elem.id }
                                     title={elem.title}
                                     skill={elem.skill}
                                 />   
                             </div>
                       }
                         )} 
-                       
-                
                 </div>
             </div>
-
         </div>
-    
     </section>
     </>
 }

@@ -58,7 +58,7 @@ a{
 }
 
 .main-nav-bar {
-    background-color: var(--cond-bg-color);
+   background-color: var(--cond-bg-color);
    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
 .navbar-nav-color a{
@@ -70,6 +70,10 @@ a{
 
 .navbar-nav-color a:hover{
     color: #283550 !important;
+}
+.navbar-toggler{
+  background-color: none!important;
+
 }
 .nav-bar-togle-icon{
     outline: none;
@@ -86,6 +90,7 @@ a{
 
 header{
     background-color: var(--cond-bg-color);
+    margin-top: 25px;
 }
 .header-content-jobs{
     color: var(--text-bg-color);
@@ -115,7 +120,7 @@ header{
     padding-right: 30px;
      text-align: justify;
 }
-.header-content button{
+.header-content .btnresume{
     margin-top: 30px;
     height: 50px;
     width: 150px;
@@ -308,9 +313,9 @@ header{
     }
 
     .badge-tech {
-      background: var(--main-bg-color);
-      color: var(--cond-bg-color);
-      font-weight: 500;
+      background: var(--cond-bg-color);
+      color: var(--text-bg-color);
+      font-weight: 700;
       padding: 0.35em 0.8em;
       font-size: 0.82rem;
     }
@@ -370,6 +375,7 @@ header{
       max-width: 1100px;
       margin: 0 auto;
     }
+
 
     .edu-card {
       background: var(--card-bg);
@@ -570,22 +576,22 @@ header{
 
 /* =============erore form=============== */
 .erore-form{
-    margin-left: 20px;
-    margin-bottom: 0px;
-    visibility: hidden;
+    text-align: center;
+    margin-top: 2px;
+    visibility: visible;
+    font-size: 15px;
 }
-.parentdiv .erore-form{
-    visibility: visible!important;
-}
+
 .parentdiv input{
     border: 1px solid red!important;
 }
 .parentdiv textarea{
     border: 1px solid red!important;
 }
-.parentdiv .erore-icon{
-    color: red;
-    visibility: visible!important;
+
+
+.item-contact-us form .erore-icon{
+  color: red !important;
 }
   .item-contact-us form .icon-send-message{
       color: white;
@@ -606,13 +612,12 @@ header{
 }
  /* =========allert send email========== */
  .contact .envoi-message{
-     width: 50%;
-     text-align: center;
+     width:fit-content;
      margin: auto;
      color: white;
      background-color: var(--main-bg-color);
-     font-size: 20px;
-     font-weight: 700;
+     font-size: 15px;
+     font-weight: 500;
 
  }
 /* footer portfolion */
