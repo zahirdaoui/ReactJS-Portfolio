@@ -114,7 +114,7 @@ const Contact = ()=>{
                                            type="email" 
                                            name="name" 
                                            error={errors.email} 
-                                           placeholder={"Email@exmple.com"} 
+                                           placeholder={"Email@example.com"} 
                                            icon="fa-at" 
                                     />
                                 </div>

@@ -12,12 +12,12 @@ export const FollowMe = [
      {
         "id":3,
         "icon":"facebook",
-        "link":"https://www.linkedin.com/in/ezzahir-daoui-bb39161b7/"
+        "link":"https://web.facebook.com/zahirdawi"
     },
      {
         "id":4,
         "icon":"instargam",
-        "link":"https://www.instagram.com/web.crud/"
+        "link":"https://www.instagram.com/zahir_dawi"
     },
      {
         "id":5,
