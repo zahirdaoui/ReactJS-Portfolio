@@ -528,6 +528,9 @@ header{
     color: var(--main-bg-color);
      animation: floatUpDown 6s ease-in-out infinite;
 }
+.item-contact-us form div{
+  margin-top: 12px;
+}
 .item-contact-us form input{ 
    height: 30px;
    min-width:300px;
@@ -536,8 +539,9 @@ header{
    border: none;
    outline: none;
    background-color: #e2e2e2;
-   padding-left: 30px;
+   padding-left: 30px; 
 }
+
 .item-contact-us form textarea{
     min-width: 300px;
     color: var(--text-bg-color);
@@ -570,16 +574,13 @@ header{
 
 /* =============erore form=============== */
 .erore-form{
-    text-align: center;
-    margin-top: 2px;
     visibility: visible;
     font-size: 15px;
+    margin-bottom: 2px;
+    margin-top:0px;
 }
 
-.parentdiv input{
-    border: 1px solid red!important;
-}
-.parentdiv textarea{
+.input-error{
     border: 1px solid red!important;
 }
 

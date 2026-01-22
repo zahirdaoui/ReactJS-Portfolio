@@ -1,106 +1,79 @@
 import { useRef } from "react"
 import { useState } from "react";
 
-import emailjs from "@emailjs/browser";
+import sendEmail from "../helper/sendEmail";
 
+import Input from "../ui/input";
+import TextArea from "../ui/textarea";
+import Captcha from "../ui/captcha";
 
 
 const Contact = ()=>{
 
-   
-
     const [alert , setAlert] = useState(false);
-    const refsubject = useRef(null);
-    const refname = useRef(null);
-    const refemail = useRef(null);
-    const refmessage = useRef(null);
+    const formRef = useRef();
 
-    const errorSubject = useRef(null);
-    const [subjectHasError , setsubjectHasError ] = useState(true);
-    const errorName = useRef(null);
-    const [nameHasError , setNameHasError ] = useState(true);
-    const errorEmail = useRef(null);
-    const [emailHasError , setEmailHasError ] = useState(true);
-    const errorMessage = useRef(null);
-    const [MessageHasError , setMessageHasError ] = useState(true);
+    const captchaRef = useRef();
+    const [captchaValid, setCaptchaValid] = useState(false);
 
-    const date = new Date();
-    const timeSend = date.getMonth()+"/"+ date.getDay() +"/"+ date.getFullYear()
-        + " at "+date.getHours() 
-        + ':' + date.getMinutes();
+    const [errors , setErrors] = useState({});
+    
+        
+    const changeInput = (e)=>{
 
-    const emailSubmit = (e)=>{
         e.preventDefault();
         let isValid = false;
-        var patternReg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        let name = refname.current.value.trim();
-        let subject = refsubject.current.value.trim();
-        let email = refemail.current.value.trim();
-        let message = refmessage.current.value.trim();
 
-          if(!name || name.length < 2){
-                 errorName.current.innerText = "Name must be at least 3 characters!";
+        var patternReg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const form = e.target;
+        let name = form.name?.value?.trim();
+        let subject = form.subject?.value?.trim();
+        let email = form.email?.value?.trim();
+        let body = form.body?.value?.trim();
+
+        let newErrors = {};
+
+            if (!captchaValid) {
+            newErrors.captcha ="Please verify that you are not a robot";
                  isValid=false;
-                 setNameHasError(true);
-          }else{
-            errorName.current.innerText = "";
-            setNameHasError(false);
-            isValid=true;
+            }
+
+        if(!name || name.length < 2){
+                 newErrors.name ="Name must be at least 3 characters!";
+                 isValid=false;
           }
+
           if(!subject || subject.length < 5){
-              errorSubject.current.innerText = "Subject must be at least 5 characters!";
+              newErrors.subject ="Subject must be at least 5 characters!";
               isValid= false;
-              setsubjectHasError(true);
-          }else{
-             errorSubject.current.innerText = "";
-             setsubjectHasError(false);
-             isValid=true;
           }
 
           if(!email || !patternReg.test(email)){
-             errorEmail.current.innerText = "Please enter a valid email address!";
+              newErrors.email = "Please enter a valid email address!";
              isValid=false;
-             setEmailHasError(true);
-          }else{
-            errorEmail.current.innerText = "";
-            setEmailHasError(false)
-            isValid=true;
-          }
-          if(!message || message.length < 10){
-            errorMessage.current.innerText = "Message must be at least 10 characters!";
-             isValid=false;
-             setMessageHasError(true);
-          }else{
-            errorMessage.current.innerText = "";
-            setMessageHasError(false);
-            isValid=true;
           }
 
-          if(!subjectHasError && !emailHasError && !nameHasError && !MessageHasError){
-              console.log(errorSubject.current.value);
-                emailjs
-                .send(
-                    process.env.REACT_APP_EMAILJS_SERVICE_ID,
-                    process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-                    {
-                    "name": name,
-                    "subject": subject,
-                    "time":timeSend,
-                    "email": email,
-                    "message": message,
-                    },
-                    process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
-                )
-                .then(
-                    (result) => {
-                    setAlert(true);
-                    },
-                    (error) => {
-                    console.log(error.text);
-                    }
-                );
+          if(!body || body.length < 10){
+            newErrors.body = "Message must be at least 10 characters!";
+             isValid=false;
+          }else{
+            isValid = true;
           }
+
+          setErrors(newErrors);
+
+           if (Object.keys(newErrors).length == 0 || isValid === true){
+              sendEmail(formRef);
+              setAlert(true);
+              formRef.current.reset();
+              captchaRef.current.reset();
+           }
+          
+
     }
+    const onCaptchaChange = (value) => {
+    setCaptchaValid(!!value);
+  };
     return <>
              
         <section className="contact py-5" id="contact">
@@ -112,38 +85,54 @@ const Contact = ()=>{
                             <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                      : ""}
-                    
                     <div className="row g-2 justify-content-center align-items-center item-contact-us">
                         <div className="col-12 col-md-5 align-self-center">
                             <i className="fas fa-envelope d-none d-md-block item-contact-us-image"></i>
                         </div>
                         <div className="col-12 col-md-5 item-contact-us-form">
-                            <form onSubmit={emailSubmit}>
+                            <form ref={formRef} onSubmit={changeInput}>
                                 <div>
-                                    <i className="fas fa-bookmark"></i>
-                                    <input ref={refsubject} type="text" id="subject" placeholder="Subject" />
-                                    {subjectHasError ? <i className="fas fa-exclamation-circle erore-icon"></i> : "" }
-                                    <p ref={errorSubject} className="text-danger erore-form"></p>
+                                    <Input 
+                                        type="text" 
+                                        name="subject" 
+                                        error={errors.subject} 
+                                        placeholder={"Subjet ..."} 
+                                        icon="fa-bookmark"
+                                    />
                                 </div>
                                 <div>
-                                    <i className="fas fa-user-alt"></i>
-                                    <input ref={refname} type="text" id="name" placeholder="Name" />
-                                    {nameHasError ? <i className="fas fa-exclamation-circle erore-icon"></i> : "" }
-                                    <i className="fas fa-exclamation-circle erore-icon invisible"></i>
-                                    <p ref={errorName} className="text-danger erore-form"></p>
+                                    <Input 
+                                        type="text" 
+                                        name="name" 
+                                        error={errors.name} 
+                                        placeholder={"Your name ..."} 
+                                        icon="fa-user-alt"
+                                    />
                                 </div>
                                 <div>
-                                    <i className="fas fa-at"></i>
-                                    <input ref={refemail} type="email" id="email" placeholder="Email@example.com"/>
-                                    
-                                    {emailHasError ? <i className="fas fa-exclamation-circle erore-icon"></i> : "" }
-                                    <p ref={errorEmail} className="text-danger erore-form"></p>
+                                    <Input 
+                                           type="email" 
+                                           name="name" 
+                                           error={errors.email} 
+                                           placeholder={"Email@exmple.com"} 
+                                           icon="fa-at" 
+                                    />
+                                </div>
+                                
+                                <div>
+                                    <TextArea
+                                           name="body" 
+                                           error={errors.body} 
+                                           placeholder={"Write your message here…"} 
+                                           icon="fa-envelope" 
+                                    />
                                 </div>
                                 <div>
-                                    <i className="fas fa-envelope"></i>
-                                    <textarea ref={refmessage} name="message" id="message" placeholder="Message ........."></textarea>
-                                     {MessageHasError ? <i className="fas fa-exclamation-circle erore-icon"></i> : "" }
-                                    <p ref={errorMessage} className="text-danger erore-form"></p>
+                                    <Captcha
+                                        OnChange={onCaptchaChange}
+                                        ref={captchaRef}
+                                        error={errors.captcha}
+                                    />
                                 </div>
                                 <div>
                                     <i className="fas fa-paper-plane icon-send-message"></i>
