@@ -112,7 +112,7 @@ const Contact = ()=>{
                                 <div>
                                     <Input 
                                            type="email" 
-                                           name="name" 
+                                           name="email" 
                                            error={errors.email} 
                                            placeholder={"Email@example.com"} 
                                            icon="fa-at" 

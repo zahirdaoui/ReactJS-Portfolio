@@ -9,7 +9,7 @@ function sendEmail(RefForm){
                 )
                 .then(
                     (result) => {
-                    console.log("from email function  send result")
+                    console.log(result.text)
                     },
                     (error) => {
                     console.log(error);
