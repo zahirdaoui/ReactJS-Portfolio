@@ -313,7 +313,7 @@ header{
     }
 
     .badge-tech {
-      background: var(--cond-bg-color);
+      background: var(--main-bg-color);
       color: var(--text-bg-color);
       font-weight: 700;
       padding: 0.35em 0.8em;
