@@ -1,12 +1,18 @@
-
 import './App.css'
 import Home from './pages/home'
+import { Route, Routes } from 'react-router'
+import ZadCars from './pages/zadcars'
 
 function App() {
 
   return (
     <>
-      <div><Home/></div>
+    <Routes>
+      <Route path="" element={<Home/>} />
+      <Route path="/home" element={<Home/>} /> 
+      <Route path="/zad-cars" element={<ZadCars/>} />
+    </Routes>
+      
     </>
   )
 }

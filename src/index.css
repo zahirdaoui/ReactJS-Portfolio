@@ -643,7 +643,102 @@ header{
     font-size: 18px;
 }
 
+/* zad-cars */
 
+.hero-header {
+    background-color: var(--main-bg-color);
+    color: white;
+    padding: 80px 0;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    margin: 0;
+}
+
+.section-title {
+    color: var(--text-bg-color);
+    font-weight: 700;
+    border-left: 5px solid var(--main-bg-color);
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: var(--cond-bg-color);
+    color: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.tech-pill {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin: 5px;
+}
+
+.text-muted-custom {
+    color: var(--media-text-color);
+}
+
+.sidebar-card {
+    background-color: var(--text-bg-color);
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.highlight-item i {
+    color: var(--main-bg-color);
+}
+
+.btn-demo {
+      background-color:var(--main-bg-color)!important;
+      color: var(--main-bg-color);
+      font-weight: 700!important;
+      padding: 35px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2px solid transparent;
+      transition: all 0.3s ease-in-out;
+      height: 50px;
+  }
+
+  .btn-demo:hover {
+      background-color: var(--text-bg-color);
+      color: #ffffff;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+
+  /* Responsive tweak for button */
+  @media (max-width: 576px) {
+      .btn-demo {
+          width: 100%;
+          text-align: center;
+      }
+  }
 
 
 
