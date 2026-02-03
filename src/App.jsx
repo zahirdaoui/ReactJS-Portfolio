@@ -1,7 +1,7 @@
 import './App.css'
 import Home from './pages/home'
 import { Route, Routes } from 'react-router'
-import ZadCars from './pages/zadcars'
+import Project from './pages/project'
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
     <Routes>
       <Route path="" element={<Home/>} />
       <Route path="/home" element={<Home/>} /> 
-      <Route path="/zad-cars" element={<ZadCars/>} />
+      <Route path="/project/:id" element={<Project/>} />
     </Routes>
       
     </>

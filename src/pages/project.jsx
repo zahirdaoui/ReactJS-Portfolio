@@ -5,17 +5,20 @@ import BtnDemo from "../components/projectComponent/btnDemo";
 import HeaderProject from "../components/projectComponent/headerProject"
 import KeyCard from "../components/projectComponent/keyCard";
 import ProjectOverview from "../components/projectComponent/projectOverview";
+import { useParams } from "react-router-dom";
+
 
 
 import { projectData } from "../data/project";
-const ZadCars = ()=>{
-     const data_key = projectData[0].details[0].key_features;
-     const Data_Badge = projectData[0].details[0].highlights;
-     const badgeElements = projectData[0].tags;
-     const url = projectData[0].link;
-     const title = projectData[0].title;
-     const header_text = projectData[0].header_desc;
-     const project_Overview = projectData[0].project_overview;
+const Project = ()=>{
+    const {id} = useParams();
+     const data_key = projectData[id].details[0].key_features;
+     const Data_Badge = projectData[id].details[0].highlights;
+     const badgeElements = projectData[id].tags;
+     const url = projectData[id].link;
+     const title = projectData[id].title;
+     const header_text = projectData[id].header_desc;
+     const project_Overview = projectData[id].project_overview;
     return <>
             <HeaderProject title={title}
                         text={header_text} 
@@ -41,15 +44,13 @@ const ZadCars = ()=>{
                         </ul>
                     </div>
                 </div>
-                
             </div>
             <BtnDemo link={url}/>
         </main>
-
-         <Footer/>
+        
         <CopyRight/>
     
     </>
 }
 
-export default ZadCars
+export default Project

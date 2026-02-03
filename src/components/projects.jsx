@@ -15,12 +15,13 @@ const Projects = ()=>{
        <div id="projects" className="container">
             <h1 className="section-title">Some Things I've Built</h1>
             <div className="row g-4 pb-5">
-                {data.map((elem)=>
+                {data.map((elem,index)=>
                            <CartProject
+                           index={index}
                            key={elem.id}
                            data={elem}
                            />
-            )}
+                )}
              </div>
         </div>
 
