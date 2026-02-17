@@ -1,15 +1,14 @@
 import CopyRight from "../components/copyRight"
-import Footer from "../components/footer"
 import BadgeCart from "../components/projectComponent/badgeCart";
 import BtnDemo from "../components/projectComponent/btnDemo";
 import HeaderProject from "../components/projectComponent/headerProject"
 import KeyCard from "../components/projectComponent/keyCard";
 import ProjectOverview from "../components/projectComponent/projectOverview";
+import Video from "../ui/video";
 import { useParams } from "react-router-dom";
-
-
-
 import { projectData } from "../data/project";
+import { useEffect } from "react";
+
 const Project = ()=>{
     const {id} = useParams();
      const data_key = projectData[id].details[0].key_features;
@@ -19,6 +18,10 @@ const Project = ()=>{
      const title = projectData[id].title;
      const header_text = projectData[id].header_desc;
      const project_Overview = projectData[id].project_overview;
+     const video = projectData[id].video;
+     useEffect(() => {
+        window.scrollTo(0, 0);
+        }, []);
     return <>
             <HeaderProject title={title}
                         text={header_text} 
@@ -43,6 +46,7 @@ const Project = ()=>{
                             {Data_Badge.map((elem)=>{return  <BadgeCart key={elem.id} title={elem.title} text={elem.text} />})}
                         </ul>
                     </div>
+                    {video && <Video title="Video" url={video} />}
                 </div>
             </div>
             <BtnDemo link={url}/>

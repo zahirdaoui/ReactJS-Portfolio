@@ -20,7 +20,7 @@ const Projects = ()=>{
                            index={index}
                            key={elem.id}
                            data={elem}
-                           />
+                 />
                 )}
              </div>
         </div>

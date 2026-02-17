@@ -708,6 +708,15 @@ header{
     padding: 30px;
 }
 
+.sidebar-card-vedeo{
+ background-color: var(--main-bg-color);
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 18px;
+}
+.sidebar-card-vedeo video{
+    border-radius: 10px;
+}
 .highlight-item i {
     color: var(--main-bg-color);
 }
