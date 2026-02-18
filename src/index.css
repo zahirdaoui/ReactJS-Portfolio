@@ -190,6 +190,7 @@ header{
     font-weight: 400;
      text-align: justify;
 }
+
 .skill-card {
         background:var(--cond-bg-color);
         backdrop-filter: blur(12px);
@@ -220,11 +221,14 @@ header{
     .skill-card:nth-child(1) { animation-delay: 0s; }
     .skill-card:nth-child(2) { animation-delay: 2s; }
     .skill-card:nth-child(3) { animation-delay: 4s; }
+    .card-header { color:var(--text-bg-color); }
+    .skill-card:hover .card-header{ color: white!important;; }
 
     .skill-card:hover {
       transform: translateY(-10px) scale(1.05) !important;
       transition: all 0.7s;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      background-color: var(--main-bg-color);
     }
 
     .card-header {
@@ -243,6 +247,9 @@ header{
       border-radius: 50%;
       margin: auto;
     }
+    .skill-card:hover .skill-icon {
+        color: var(--cond-bg-color);
+    }
 
     .tech-name {
       font-size: 0.95rem;
@@ -250,7 +257,10 @@ header{
       color:var(--text-bg-color);
       text-align: inherit;
     }
-.card-header { color:var(--text-bg-color); }
+    .skill-card:hover .tech-name {
+        color: var(--cond-bg-color);
+    }
+
     /* Category colors */
     
 

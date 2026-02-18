@@ -25,6 +25,11 @@ const data = [
       },
       {
         "id":5,
+        "title_skill":"Tailwindcss",
+        "logo":'tailwind'
+      },
+      {
+        "id":6,
         "title_skill":"Reactjs",
         "logo":'reactjs'
       }
@@ -48,6 +53,16 @@ const data = [
         "id":3,
         "title_skill":"Spring",
         "logo":'java'
+      },
+      {
+        "id":4,
+        "title_skill":"SpringBoot",
+        "logo":'springboot'
+      },
+      {
+        "id":5,
+        "title_skill":"SpringSecurity",
+        "logo":'springsecurity'
       }
     ]
   },
@@ -69,6 +84,11 @@ const data = [
         "id":3,
         "title_skill":"SqlServer",
         "logo":'sqlserver'
+      },
+      {
+        "id":4,
+        "title_skill":"Mongodb",
+        "logo":'mongodb'
       }
     ]
   },
@@ -97,6 +117,11 @@ const data = [
         "id":4,
         "title_skill":"Postman",
         "logo":'postman'
+      },
+      {
+        "id":5,
+        "title_skill":"Json",
+        "logo":'json'
       }
     ]
   }
