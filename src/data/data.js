@@ -84,11 +84,6 @@ const data = [
         "id":3,
         "title_skill":"SqlServer",
         "logo":'sqlserver'
-      },
-      {
-        "id":4,
-        "title_skill":"Mongodb",
-        "logo":'mongodb'
       }
     ]
   },

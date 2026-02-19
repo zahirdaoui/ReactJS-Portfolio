@@ -290,65 +290,6 @@ export const projectData = [
       ]
     }
   ]
-},
-{
-  "id": 6,
-  "title": "AI Resume Analyzer & PDF Q&A Platform",
-  "header_desc": "An AI-powered platform to analyze resumes and answer questions from uploaded PDF files.",
-  "description": "This web application was developed using Java 17, Spring Boot 6, Spring MVC, Spring Security with JWT, Spring Data JPA, PostgreSQL, Spring AI, and React.js. It allows users to upload resume PDFs and other documents, automatically analyze their content using AI, and ask questions to receive contextual answers extracted from the uploaded files. The project demonstrates AI integration in backend services, secure REST APIs, document processing, and a modern full-stack architecture.",
-  "cover_alt": "A modern AI dashboard showing PDF upload, resume analysis results, and a chat-like interface where users ask questions and receive AI-powered answers based on the uploaded document content.",
-  "cover": "soon.webp",
-  "tags": ["Java 17", "Spring Boot 6", "Spring MVC", "Spring Security JWT", "Spring Data JPA", "PostgreSQL", "Spring AI", "React.js"],
-  "link": "https://your-ai-resume-demo-link.com/",
-  "project_overview": "This project is an AI-powered document assistant platform. Users can upload resume PDFs or other documents, get structured insights (skills, experience, keywords), and interact with the content by asking natural-language questions. The system uses Spring AI to process document content and return accurate, contextual responses based on the uploaded file.",
-  "details": [
-    {
-      "key_features": [
-        {
-          "id": 1,
-          "title": "Resume Analysis",
-          "text": "Upload resume PDFs to extract key information such as skills, experience, technologies, and recommendations using AI.",
-          "icon": "file-alt"
-        },
-        {
-          "id": 2,
-          "title": "PDF Question & Answer",
-          "text": "Ask natural-language questions about uploaded documents and receive contextual AI-powered answers.",
-          "icon": "comments"
-        },
-        {
-          "id": 3,
-          "title": "Secure API with JWT",
-          "text": "Protected endpoints using Spring Security and JWT authentication to ensure user data privacy.",
-          "icon": "shield-alt"
-        },
-        {
-          "id": 4,
-          "title": "Document Management",
-          "text": "Manage uploaded files with storage, indexing, and retrieval for fast AI processing and user access.",
-          "icon": "folder-open"
-        }
-      ],
-      "highlights": [
-        {
-          "id": 1,
-          "title": "AI Integration with Spring AI",
-          "text": "Leverages Spring AI to connect LLMs for document understanding and question answering."
-        },
-        {
-          "id": 2,
-          "title": "RAG Architecture",
-          "text": "Uses Retrieval-Augmented Generation (RAG) to provide accurate answers grounded in uploaded PDF content."
-        },
-        {
-          "id": 3,
-          "title": "Modern Full-Stack UX",
-          "text": "React.js front-end with a chat-like interface for smooth interaction with AI-powered features."
-        }
-      ]
-    }
-  ]
 }
-
 
 ]
